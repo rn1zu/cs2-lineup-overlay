@@ -167,8 +167,12 @@ XButton2:: {
     WinShow("ahk_id " MyGui.Hwnd)
 }
 XButton2 Up:: {
-    WinHide("ahk_id " MyGui.Hwnd)
+    try {
+        WinHide("ahk_id " MyGui.Hwnd)
+    }
+    ; Если окно не найдено, ничего не делаем и не показываем ошибку
 }
+
 
 ; Сворачивание игры по одиночному нажатию Win
 LWin:: {
