@@ -35,7 +35,10 @@ XButton2:: {
 }
 ; Hide when released
 XButton2 Up:: {
-    WinHide("ahk_id " MyGui.Hwnd)
+    try {
+        WinHide("ahk_id " MyGui.Hwnd)
+    }
+    ; If the window is not found, do nothing and don't show an error
 }
 
 ; Minimize game with a single Win key press (if held, works as a modifier)
