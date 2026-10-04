@@ -1,18 +1,18 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-A_MenuMaskKey := "vkE8"    ; маскировка Win, чтобы не открывался Game Bar
+A_MenuMaskKey := "vkE8"    ; Mask Win key so Game Bar doesn't open
 
-; Настройки оверлея
-OverlayAlpha := 180        ; Прозрачность (0-255)
-OverlayX_Offset := 0       ; Смещение по X от центра
-OverlayY_Offset := 0       ; Смещение по Y от центра
-ImageFile := "lineup.png"  ; Имя файла с картинкой
+; Overlay settings
+OverlayAlpha := 180        ; Transparency (0-255)
+OverlayX_Offset := 0       ; X offset from center
+OverlayY_Offset := 0       ; Y offset from center
+ImageFile := "lineup.png"  ; Image file name
 
-; Получаем разрешение экрана
+; Get screen resolution
 ScreenW := A_ScreenWidth
 ScreenH := A_ScreenHeight
 
-; Создаём окно
+; Create the window
 MyGui := Gui()
 MyGui.Opt("+AlwaysOnTop -Caption +ToolWindow +LastFound +E0x80020")
 MyGui.MarginX := 0
@@ -20,29 +20,29 @@ MyGui.MarginY := 0
 MyGui.BackColor := "000000"
 MyGui.Add("Picture", "x0 y0 w" ScreenW " h" ScreenH " BackgroundTrans", ImageFile)
 
-; Прозрачность и клик-сквозность
+; Transparency and click-through
 WinSetTransColor("000000 " OverlayAlpha, MyGui)
 WinSetExStyle("+0x20", MyGui)
 
-; Показываем и сразу скрываем
+; Show and immediately hide
 MyGui.Show("x" (ScreenW/2 - (ScreenW/2) + OverlayX_Offset) " y" (ScreenH/2 - (ScreenH/2) + OverlayY_Offset) " w" ScreenW " h" ScreenH " NoActivate")
 WinHide("ahk_id " MyGui.Hwnd)
 
-; --- Горячие клавиши ---
-; Показ оверлея при зажатии mouse5
+; --- Hotkeys ---
+; Show overlay when mouse5 is held
 XButton2:: {
     WinShow("ahk_id " MyGui.Hwnd)
 }
-; Скрытие при отпускании
+; Hide when released
 XButton2 Up:: {
     WinHide("ahk_id " MyGui.Hwnd)
 }
 
-; Сворачивание игры по одиночному нажатию Win (если зажать — работает как модификатор)
+; Minimize game with a single Win key press (if held, works as a modifier)
 LWin:: {
     if KeyWait("LWin", "T0.25")
         WinMinimize("A")
 }
 
-; Аварийный выход по F12
+; Emergency exit with F12
 F12::ExitApp
