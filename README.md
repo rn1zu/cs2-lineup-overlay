@@ -409,4 +409,4 @@ bind "h" "chc_next"
 ---
 
 *© Microsoft Corporation. All rights reserved.*  
-*— шутка, конечно. Но раз просили, вот.*
+*— шутка, конечно.
