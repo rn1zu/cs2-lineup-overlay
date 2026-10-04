@@ -40,11 +40,11 @@ AutoHotkey.
 
 
 
-&#x20; IMPORTANT: Use in competitive matchmaking is at your own risk.
+; IMPORTANT: Use in competitive matchmaking is at your own risk.
 
-&#x20; Do NOT use this overlay in tournaments where third-party software
+; Do NOT use this overlay in tournaments where third-party software
 
-&#x20; is prohibited.
+; is prohibited.
 
 
 
@@ -58,25 +58,25 @@ REQUIREMENTS
 
 
 
-&#x20; 1. Windows 10/11
+; 1. Windows 10/11
 
 
 
-&#x20; 2. AutoHotkey v2 — download from the official website:
+; 2. AutoHotkey v2 — download from the official website:
 
-&#x20;    https://www.autohotkey.com/
-
-
-
-&#x20; 3. Adobe Photoshop (or any editor that supports PNG and transparency)
+;    https://www.autohotkey.com/
 
 
 
-&#x20; 4. CS2 running in "Windowed Fullscreen" (Borderless) mode.
+; 3. Adobe Photoshop (or any editor that supports PNG and transparency)
 
 
 
-&#x20;    IMPORTANT: In "Full Screen" mode the overlay will NOT work.
+; 4. CS2 running in "Windowed Fullscreen" (Borderless) mode.
+
+
+
+;    IMPORTANT: In "Full Screen" mode the overlay will NOT work.
 
 
 
@@ -94,21 +94,21 @@ STEP 1. PREPARING THE CROSSHAIR IMAGE IN PHOTOSHOP
 
 
 
-&#x20;      Width:             1920 px
+;      Width:             1920 px
 
-&#x20;      Height:            1080 px
+;      Height:            1080 px
 
-&#x20;      Resolution:        72 ppi
+;      Resolution:        72 ppi
 
-&#x20;      Color mode:        RGB, 8 bit
+;      Color mode:        RGB, 8 bit
 
-&#x20;      Background:        Transparent
+;      Background:        Transparent
 
 
 
-&#x20;    IMPORTANT: Always choose "Transparent" background. If you pick "White",
+;    IMPORTANT: Always choose "Transparent" background. If you pick "White",
 
-&#x20;    the overlay will cover your entire screen with a white square.
+;    the overlay will cover your entire screen with a white square.
 
 
 
@@ -118,11 +118,11 @@ STEP 1. PREPARING THE CROSSHAIR IMAGE IN PHOTOSHOP
 
 
 
-&#x20;      View -> New Guide
+;      View -> New Guide
 
-&#x20;        Vertical:   960 px
+;        Vertical:   960 px
 
-&#x20;        Horizontal: 540 px
+;        Horizontal: 540 px
 
 
 
@@ -132,55 +132,55 @@ STEP 1. PREPARING THE CROSSHAIR IMAGE IN PHOTOSHOP
 
 
 
-&#x20;    Line parameters:
+;    Line parameters:
 
 
 
-&#x20;      Thickness: same as cl\_crosshairthickness in CS2 (e.g. 2 px).
+;      Thickness: same as cl\_crosshairthickness in CS2 (e.g. 2 px).
 
-&#x20;                 Note that a stroke adds 1 px on each side, so the final
+;                 Note that a stroke adds 1 px on each side, so the final
 
-&#x20;                 visible thickness will be larger. You may skip the stroke,
+;                 visible thickness will be larger. You may skip the stroke,
 
-&#x20;                 but then the lines will be less visible on light backgrounds.
-
-
-
-&#x20;      Color:     use the RGB values from CS2.
-
-&#x20;                 For example, #4F00FF (R=79, G=0, B=255).
+;                 but then the lines will be less visible on light backgrounds.
 
 
 
-&#x20;    Vertical bars:
+;      Color:     use the RGB values from CS2.
+
+;                 For example, #4F00FF (R=79, G=0, B=255).
 
 
 
-&#x20;      Left:   X = 959, Y = 0, W = 1, H = 1080
-
-&#x20;      Right:  X = 960, Y = 0, W = 1, H = 1080
+;    Vertical bars:
 
 
 
-&#x20;    Horizontal bars (if you want a full cross):
+;      Left:   X = 959, Y = 0, W = 1, H = 1080
+
+;      Right:  X = 960, Y = 0, W = 1, H = 1080
 
 
 
-&#x20;      Top:    X = 0, Y = 539, W = 1920, H = 1
-
-&#x20;      Bottom: X = 0, Y = 540, W = 1920, H = 1
+;    Horizontal bars (if you want a full cross):
 
 
 
-&#x20;    Gap: in CS2 you can set cl\_crosshairgap to 0 so the lines meet.
+;      Top:    X = 0, Y = 539, W = 1920, H = 1
 
-&#x20;         If you want a gap, shift the bars by 1-2 pixels.
+;      Bottom: X = 0, Y = 540, W = 1920, H = 1
 
 
 
-&#x20;    IMPORTANT: To make the bars perfectly even, enter the coordinates
+;    Gap: in CS2 you can set cl\_crosshairgap to 0 so the lines meet.
 
-&#x20;    through the Properties panel (X, Y, W, H) instead of drawing by hand.
+;         If you want a gap, shift the bars by 1-2 pixels.
+
+
+
+;    IMPORTANT: To make the bars perfectly even, enter the coordinates
+
+;    through the Properties panel (X, Y, W, H) instead of drawing by hand.
 
 
 
@@ -196,27 +196,27 @@ STEP 1. PREPARING THE CROSSHAIR IMAGE IN PHOTOSHOP
 
 
 
-&#x20;      File -> Export -> Export As...
+;      File -> Export -> Export As...
 
 
 
-&#x20;        Format:     PNG
+;        Format:     PNG
 
-&#x20;        "Transparency" checkbox — REQUIRED
+;        "Transparency" checkbox — REQUIRED
 
-&#x20;        File name:  lineup.png
-
-
-
-&#x20;      Save it to the folder where the script will live
-
-&#x20;      (for example, C:\\CrosshairOverlay\\).
+;        File name:  lineup.png
 
 
 
-&#x20;    IMPORTANT: Do NOT save as JPG — it does not support transparency,
+;      Save it to the folder where the script will live
 
-&#x20;    and a dark or white rectangle will appear around the crosshair in game.
+;      (for example, C:\\CrosshairOverlay\\).
+
+
+
+;    IMPORTANT: Do NOT save as JPG — it does not support transparency,
+
+;    and a dark or white rectangle will appear around the crosshair in game.
 
 
 
@@ -236,13 +236,13 @@ STEP 2. INSTALLING AUTOHOTKEY V2
 
 2.2. Run the installer. Windows will show a SmartScreen warning —
 
-&#x20;    click "More info" -> "Run anyway".
+;    click "More info" -> "Run anyway".
 
 
 
-&#x20;    This is a standard warning for any new program. It does not mean
+;    This is a standard warning for any new program. It does not mean
 
-&#x20;    the file contains a virus.
+;    the file contains a virus.
 
 
 
@@ -340,7 +340,7 @@ WinHide("ahk\_id " MyGui.Hwnd)
 
 XButton2:: {
 
-&#x20;   WinShow("ahk\_id " MyGui.Hwnd)
+;   WinShow("ahk\_id " MyGui.Hwnd)
 
 }
 
@@ -348,7 +348,13 @@ XButton2:: {
 
 XButton2 Up:: {
 
-&#x20;   WinHide("ahk\_id " MyGui.Hwnd)
+    try {
+
+        WinHide("ahk_id " MyGui.Hwnd)
+
+    }
+
+    ; If the window is not found, do nothing and don't show an error
 
 }
 
@@ -358,9 +364,9 @@ XButton2 Up:: {
 
 LWin:: {
 
-&#x20;   if KeyWait("LWin", "T0.25")
+;   if KeyWait("LWin", "T0.25")
 
-&#x20;       WinMinimize("A")
+;       WinMinimize("A")
 
 }
 
@@ -378,15 +384,15 @@ F12::ExitApp
 
 
 
-&#x20;    If Windows hides extensions, enable them in Explorer:
+;    If Windows hides extensions, enable them in Explorer:
 
-&#x20;    View -> Show -> File name extensions.
+;    View -> Show -> File name extensions.
 
 
 
-&#x20;    IMPORTANT: If the file is saved as lineup\_overlay.ahk.txt, the script
+;    IMPORTANT: If the file is saved as lineup\_overlay.ahk.txt, the script
 
-&#x20;    will not run. Check the extension.
+;    will not run. Check the extension.
 
 
 
@@ -406,17 +412,17 @@ button, find these two lines in the code:
 
 
 
-&#x20;   XButton2:: {
+;   XButton2:: {
 
-&#x20;       WinShow("ahk\_id " MyGui.Hwnd)
+;       WinShow("ahk\_id " MyGui.Hwnd)
 
-&#x20;   }
+;   }
 
-&#x20;   XButton2 Up:: {
+;   XButton2 Up:: {
 
-&#x20;       WinHide("ahk\_id " MyGui.Hwnd)
+;       WinHide("ahk\_id " MyGui.Hwnd)
 
-&#x20;   }
+;   }
 
 
 
@@ -434,47 +440,47 @@ POPULAR BUTTON NAMES IN AUTOHOTKEY V2
 
 
 
-&#x20; Button                                      Name in script
+; Button                                      Name in script
 
-&#x20; -----------------------------------------   -----------------
+; -----------------------------------------   -----------------
 
-&#x20; Mouse4 (side button, closer to thumb)       XButton1
+; Mouse4 (side button, closer to thumb)       XButton1
 
-&#x20; Mouse5 (side button, farther)               XButton2
+; Mouse5 (side button, farther)               XButton2
 
-&#x20; Middle mouse button                         MButton
+; Middle mouse button                         MButton
 
-&#x20; Left mouse button                           LButton
+; Left mouse button                           LButton
 
-&#x20; Right mouse button                          RButton
+; Right mouse button                          RButton
 
-&#x20; Mouse wheel up                              WheelUp
+; Mouse wheel up                              WheelUp
 
-&#x20; Mouse wheel down                            WheelDown
+; Mouse wheel down                            WheelDown
 
-&#x20; Mouse wheel left                            WheelLeft
+; Mouse wheel left                            WheelLeft
 
-&#x20; Mouse wheel right                           WheelRight
+; Mouse wheel right                           WheelRight
 
-&#x20; Key F                                       f
+; Key F                                       f
 
-&#x20; Key Space                                   Space
+; Key Space                                   Space
 
-&#x20; Key V                                       v
+; Key V                                       v
 
-&#x20; Key H                                       h
+; Key H                                       h
 
-&#x20; Key CapsLock                                CapsLock
+; Key CapsLock                                CapsLock
 
-&#x20; Keys F1 - F12                               F1 ... F12
+; Keys F1 - F12                               F1 ... F12
 
-&#x20; Key Tab                                     Tab
+; Key Tab                                     Tab
 
-&#x20; Left Alt                                    LAlt
+; Left Alt                                    LAlt
 
-&#x20; Left Ctrl                                   LCtrl
+; Left Ctrl                                   LCtrl
 
-&#x20; Left Shift                                  LShift
+; Left Shift                                  LShift
 
 
 
@@ -492,17 +498,17 @@ Replace the hotkey block with:
 
 
 
-&#x20;   XButton1:: {
+;   XButton1:: {
 
-&#x20;       WinShow("ahk\_id " MyGui.Hwnd)
+;       WinShow("ahk\_id " MyGui.Hwnd)
 
-&#x20;   }
+;   }
 
-&#x20;   XButton1 Up:: {
+;   XButton1 Up:: {
 
-&#x20;       WinHide("ahk\_id " MyGui.Hwnd)
+;       WinHide("ahk\_id " MyGui.Hwnd)
 
-&#x20;   }
+;   }
 
 
 
@@ -520,23 +526,23 @@ IMPORTANT WHEN CHOOSING A BUTTON
 
 
 
-&#x20; - Do not bind to keys already used in CS2 (fire, jump, crouch, grenades,
+; - Do not bind to keys already used in CS2 (fire, jump, crouch, grenades,
 
-&#x20;   voice) — otherwise there will be a conflict.
-
-
-
-&#x20; - If you use a keyboard key, make sure nothing is bound to it in game.
-
-&#x20;   You can check in the console: bind h will show what is currently
-
-&#x20;   bound to the key.
+;   voice) — otherwise there will be a conflict.
 
 
 
-&#x20; - The pair "X::" and "X Up::" is REQUIRED. If you leave only the first
+; - If you use a keyboard key, make sure nothing is bound to it in game.
 
-&#x20;   one, the overlay will turn on and never turn off.
+;   You can check in the console: bind h will show what is currently
+
+;   bound to the key.
+
+
+
+; - The pair "X::" and "X Up::" is REQUIRED. If you leave only the first
+
+;   one, the overlay will turn on and never turn off.
 
 
 
@@ -610,33 +616,33 @@ timeout /t 1 >NUL
 
 
 
-&#x20;    The line start "" "%\~dp0lineup\_overlay.ahk" uses a relative path.
+;    The line start "" "%\~dp0lineup\_overlay.ahk" uses a relative path.
 
-&#x20;    %\~dp0 means "the folder where this .bat file is located".
-
-
-
-&#x20;    This means the .bat file and lineup\_overlay.ahk MUST be in the SAME
-
-&#x20;    folder. If you move the .bat to the Desktop, it will not find the
-
-&#x20;    script.
+;    %\~dp0 means "the folder where this .bat file is located".
 
 
 
-&#x20;    If you want the .bat file to be somewhere else, replace the path with
+;    This means the .bat file and lineup\_overlay.ahk MUST be in the SAME
 
-&#x20;    a full absolute path, for example:
+;    folder. If you move the .bat to the Desktop, it will not find the
 
-
-
-&#x20;      start "" "C:\\CrosshairOverlay\\lineup\_overlay.ahk"
+;    script.
 
 
 
-&#x20;    NOTE: The path MUST be in double quotes. If the path contains spaces,
+;    If you want the .bat file to be somewhere else, replace the path with
 
-&#x20;    the .bat file will not work without quotes.
+;    a full absolute path, for example:
+
+
+
+;      start "" "C:\\CrosshairOverlay\\lineup\_overlay.ahk"
+
+
+
+;    NOTE: The path MUST be in double quotes. If the path contains spaces,
+
+;    the .bat file will not work without quotes.
 
 
 
@@ -644,7 +650,7 @@ timeout /t 1 >NUL
 
 
 
-&#x20;    If Windows will not let you rename, enable file extensions first.
+;    If Windows will not let you rename, enable file extensions first.
 
 
 
@@ -656,9 +662,9 @@ Now just double-click Crosshair.bat:
 
 
 
-&#x20; - If the overlay is OFF — it will start (H icon appears in the tray).
+; - If the overlay is OFF — it will start (H icon appears in the tray).
 
-&#x20; - If the overlay is ON — it will stop (H icon disappears).
+; - If the overlay is ON — it will stop (H icon disappears).
 
 
 
@@ -672,21 +678,21 @@ HOTKEY FOR THE .BAT FILE (OPTIONAL)
 
 
 
-&#x20; 1. Right-click Crosshair.bat ->
+; 1. Right-click Crosshair.bat ->
 
-&#x20;    "Send to" -> "Desktop (create shortcut)".
-
-
-
-&#x20; 2. On the shortcut: right-click -> "Properties" ->
-
-&#x20;    "Shortcut key" field -> press the desired combination
-
-&#x20;    (for example, Ctrl + Alt + X).
+;    "Send to" -> "Desktop (create shortcut)".
 
 
 
-&#x20; 3. Click "OK". Now you can toggle the overlay from the keyboard.
+; 2. On the shortcut: right-click -> "Properties" ->
+
+;    "Shortcut key" field -> press the desired combination
+
+;    (for example, Ctrl + Alt + X).
+
+
+
+; 3. Click "OK". Now you can toggle the overlay from the keyboard.
 
 
 
@@ -700,31 +706,31 @@ STEP 5. MANAGING THE SCRIPT
 
 
 
-&#x20; - Start: double-click lineup\_overlay.ahk.
+; - Start: double-click lineup\_overlay.ahk.
 
-&#x20;   A green H icon appears in the tray.
+;   A green H icon appears in the tray.
 
-&#x20;   If you don't see it, click the ^ arrow near the clock to expand
+;   If you don't see it, click the ^ arrow near the clock to expand
 
-&#x20;   hidden icons.
-
-
-
-&#x20; - Reload after edits: right-click the H icon -> Reload Script.
+;   hidden icons.
 
 
 
-&#x20; - Stop: right-click the H icon -> Exit.
-
-&#x20;   Or use the .bat toggle, or the taskkill commands (see Step 6).
+; - Reload after edits: right-click the H icon -> Reload Script.
 
 
 
-&#x20; IMPORTANT: If you shut down or restart your PC, the script will NOT
+; - Stop: right-click the H icon -> Exit.
 
-&#x20; auto-start. You must launch lineup\_overlay.ahk manually (or via
+;   Or use the .bat toggle, or the taskkill commands (see Step 6).
 
-&#x20; Crosshair.bat) before starting CS2 each time.
+
+
+; IMPORTANT: If you shut down or restart your PC, the script will NOT
+
+; auto-start. You must launch lineup\_overlay.ahk manually (or via
+
+; Crosshair.bat) before starting CS2 each time.
 
 
 
@@ -744,21 +750,21 @@ one of these commands:
 
 
 
-&#x20;   taskkill /IM AutoHotkey.exe /F
+;   taskkill /IM AutoHotkey.exe /F
 
-&#x20;   taskkill /IM AutoHotkey64.exe /F
+;   taskkill /IM AutoHotkey64.exe /F
 
-&#x20;   taskkill /IM AutoHotkey32.exe /F
+;   taskkill /IM AutoHotkey32.exe /F
 
 
 
-&#x20; - If the process is not found — that's normal; the script is already off.
+; - If the process is not found — that's normal; the script is already off.
 
-&#x20; - In AutoHotkey v2 the process is usually AutoHotkey64.exe
+; - In AutoHotkey v2 the process is usually AutoHotkey64.exe
 
-&#x20;   (on 64-bit systems).
+;   (on 64-bit systems).
 
-&#x20; - These commands contain no username and can be copied as-is.
+; - These commands contain no username and can be copied as-is.
 
 
 
@@ -772,31 +778,31 @@ STEP 7. USING IN CS2
 
 
 
-&#x20; 1. Launch CS2.
+; 1. Launch CS2.
 
 
 
-&#x20; 2. In video settings, choose "Windowed Fullscreen" mode.
+; 2. In video settings, choose "Windowed Fullscreen" mode.
 
 
 
-&#x20;    IMPORTANT: In "Full Screen" mode the overlay will not be visible.
+;    IMPORTANT: In "Full Screen" mode the overlay will not be visible.
 
-&#x20;    This is a Windows limitation, not a script bug.
-
-
-
-&#x20; 3. Hold mouse5 — the lines will appear on top of the game.
-
-&#x20;    Release — they disappear.
+;    This is a Windows limitation, not a script bug.
 
 
 
-&#x20; 4. To minimize the game, press Win once (single press).
+; 3. Hold mouse5 — the lines will appear on top of the game.
 
-&#x20;    If you hold Win and press another key, the system combination
+;    Release — they disappear.
 
-&#x20;    will trigger instead.
+
+
+; 4. To minimize the game, press Win once (single press).
+
+;    If you hold Win and press another key, the system combination
+
+;    will trigger instead.
 
 
 
@@ -814,21 +820,21 @@ At the top of lineup\_overlay.ahk you can change:
 
 
 
-&#x20; OverlayAlpha  - opacity (0 = fully transparent,
+; OverlayAlpha  - opacity (0 = fully transparent,
 
-&#x20;                 255 = opaque). Optimal range is 150-200.
-
-
-
-&#x20; OverlayX\_Offset, OverlayY\_Offset
-
-&#x20;               - overlay offset from screen center in pixels.
-
-&#x20;                 Default is 0.
+;                 255 = opaque). Optimal range is 150-200.
 
 
 
-&#x20; ImageFile     - image file name, if you named it differently.
+; OverlayX\_Offset, OverlayY\_Offset
+
+;               - overlay offset from screen center in pixels.
+
+;                 Default is 0.
+
+
+
+; ImageFile     - image file name, if you named it differently.
 
 
 
@@ -846,33 +852,33 @@ SECURITY AND VAC
 
 
 
-&#x20; - The overlay does NOT inject into the game, does NOT read memory,
+; - The overlay does NOT inject into the game, does NOT read memory,
 
-&#x20;   does NOT modify files. It only uses standard Windows features
+;   does NOT modify files. It only uses standard Windows features
 
-&#x20;   (a transparent window).
-
-
-
-&#x20; - VAC does not ban for external overlays that do not provide an unfair
-
-&#x20;   advantage (e.g. do not show enemies through walls).
+;   (a transparent window).
 
 
 
-&#x20; - Use in competitive matchmaking is at your own risk.
+; - VAC does not ban for external overlays that do not provide an unfair
+
+;   advantage (e.g. do not show enemies through walls).
 
 
 
-&#x20; - Do NOT use this overlay in tournaments where third-party software
-
-&#x20;   is prohibited.
+; - Use in competitive matchmaking is at your own risk.
 
 
 
-&#x20; - Do not run .ahk scripts from untrusted sources. Download AutoHotkey
+; - Do NOT use this overlay in tournaments where third-party software
 
-&#x20;   only from the official site autohotkey.com.
+;   is prohibited.
+
+
+
+; - Do not run .ahk scripts from untrusted sources. Download AutoHotkey
+
+;   only from the official site autohotkey.com.
 
 
 
@@ -914,21 +920,21 @@ bind "h" "chc\_next"
 
 
 
-&#x20; - Custom colors require cl\_crosshaircolor 5.
+; - Custom colors require cl\_crosshaircolor 5.
 
-&#x20; - Save the file as chcolor.cfg (not .txt).
+; - Save the file as chcolor.cfg (not .txt).
 
-&#x20; - In console: exec chcolor.
+; - In console: exec chcolor.
 
-&#x20; - The H key will cycle through the colors.
+; - The H key will cycle through the colors.
 
 
 
-&#x20; IMPORTANT: Aliases in CS2 now only work when loaded via autoexec at
+; IMPORTANT: Aliases in CS2 now only work when loaded via autoexec at
 
-&#x20; game start or manually in the console. Loading them via exec during
+; game start or manually in the console. Loading them via exec during
 
-&#x20; a match no longer works.
+; a match no longer works.
 
 
 
