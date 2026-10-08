@@ -406,7 +406,18 @@ bind "h" "chc_next"
 
 ## 📜 License and Copyright
 
-This README and script are provided "as is" for personal use.  
-You are free to distribute and modify them.
+This project is released under a **non-commercial license**.
+
+You are permitted to use, modify, and redistribute the README, script, and other files **for non-commercial purposes only**. This means:
+
+- ✅ Free personal use, modification, and redistribution.
+- ✅ Free inclusion in non-commercial projects, provided this license is preserved.
+- ✅ Free sharing of modified versions under the same non-commercial terms.
+- ❌ Selling the project, bundling it with paid products or services, or using it as part of a commercial offering is **not permitted** without prior written permission from the author.
+
+The project is provided **"as is"**, without warranty of any kind. See the [LICENSE](LICENSE) file for the full legal text.
+
+For commercial licensing inquiries, please open an issue on GitHub:
+https://github.com/rn1zu/cs2-lineup-overlay/issues
 
 ---
